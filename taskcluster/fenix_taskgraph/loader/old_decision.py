@@ -49,7 +49,7 @@ def loader(kind, path, config, params, loaded_tasks):
     if tasks_for == 'github-pull-request':
         ordered_groups_of_tasks = pr(builder)
     elif tasks_for == 'github-push':
-        ordered_groups_of_tasks = push(builder)
+        ordered_groups_of_tasks = push()
     elif tasks_for == 'github-release':
         git_tag = os.environ['GIT_TAG']
         version = git_tag[1:]  # remove prefixed "v"
