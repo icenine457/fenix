@@ -45,10 +45,82 @@ private fun assertSettingsView() {
     assertPrivacyHeading()
 }
 
+
+// Basics section
+fun verifyBasicsHeading() = assertBasicsHeading()
+fun verifySearchEngine() = assertSearchEngine()
+fun verifyTheme() = assertTheme()
+fun verifyAccessibility() = assertAccessibility()
+fun verifyDefaultBrowser() = assertDefaultBrowser()
+
+// Privacy section
+fun verifyPrivacyHeading() = assertPrivacyHeading()
+fun verifyTrackingProtection() = assertTrackingProtection()
+fun verifySitePermissions() = assertSitePermissions()
+fun verifyDeleteBrowsingData() = assertDeleteBrowsingData()
+fun verifyDataCollection() = assertDataCollection()
+fun verifyPrivacyNotice() = assertPrivacyNotice()
+fun verifyLeakCanary() = assertLeakCanary()
+
+// Developer tools section
+fun verifyDeveloperToolsHeading() = assertDeveloperToolsHeading()
+fun verifyRemoteDebug() = assertRemoteDebug()
+
+// About section
+fun verifyAboutHeading() = assertAboutHeading()
+fun verifyHelp() = assertHelp()
+fun verifyRateOnGooglePlay() = assertRateOnGooglePlay()
+fun verifyAboutFirefoxPreview() = assertAboutFirefoxPreview()
+
+
+
+
+
+// Basics section
 private fun assertBasicsHeading() = onView(ViewMatchers.withText("Basics"))
     .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertSearchEngine() = onView(ViewMatchers.withText("Search engine"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertTheme() = onView(ViewMatchers.withText("Theme"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertAccessibility() = onView(ViewMatchers.withText("Accessibility"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertDefaultBrowser() = onView(ViewMatchers.withText("Set as default browser"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+
+// Privacy section
 private fun assertPrivacyHeading() = onView(ViewMatchers.withText("Privacy"))
     .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertTrackingProtection() = onView(ViewMatchers.withText("Tracking Protection"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertSitePermissions() = onView(ViewMatchers.withText("Site permissions"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertDeleteBrowsingData() = onView(ViewMatchers.withText("Delete browsing data"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertDataCollection() = onView(ViewMatchers.withText("Data collection"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertPrivacyNotice() = onView(ViewMatchers.withText("Privacy notice"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertLeakCanary() = onView(ViewMatchers.withText("LeakCanary"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+
+// Developer tools section
+private fun assertDeveloperToolsHeading() = onView(ViewMatchers.withText("Developer tools"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertRemoteDebug() = onView(ViewMatchers.withText("Remote debugging via USB"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+
+// About section
+private fun assertAboutHeading() = onView(ViewMatchers.withText("About"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertHelp() = onView(ViewMatchers.withText("Help"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertRateOnGooglePlay() = onView(ViewMatchers.withText("Rate on Google Play"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+private fun assertAboutFirefoxPreview() = onView(ViewMatchers.withText("About Firefox Preview"))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
+
+
 
 private fun goBackButton() = onView(CoreMatchers.allOf(withContentDescription("Navigate up")))
 

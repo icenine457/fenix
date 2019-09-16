@@ -14,6 +14,7 @@ import org.junit.Ignore
 import org.junit.Test
 import org.mozilla.fenix.helpers.AndroidAssetDispatcher
 import org.mozilla.fenix.helpers.HomeActivityTestRule
+import org.mozilla.fenix.ui.robots.homeScreen
 
 /**
  *  Tests for verifying the main three dot menu options
@@ -54,6 +55,12 @@ class SettingsBasicsTest {
         // Open 3dot (main) menu
         // Select settings
         // Verify default search engine (Google)
+
+
+        homeScreen {
+        }.openThreeDotMenu {
+        }.openSettings {
+        }
         // Select "Search engine" to change
         // Verify menu choices: Google, Amazon.com, Bing, DuckDuckGo, Twitter, Wikipedia
         // Verify label: "Show search suggestions"
