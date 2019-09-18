@@ -6,6 +6,4 @@
 
 package org.mozilla.fenix.ui.robots
 
-class ThreeDotMenuBookmarks {
-
-}
+class ThreeDotMenuBookmarks

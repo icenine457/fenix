@@ -43,8 +43,8 @@ class SettingsBasicsTest {
         mockWebServer.shutdown()
     }
 
-    @Ignore("This is a stub test, ignore for now")
     @Test
+    // Walks through settings menu and sub-menus to ensure all items are present
     fun settingsMenuBasicsItemsTests() {
         // Open 3dot (main) menu
         // Select settings
@@ -56,11 +56,48 @@ class SettingsBasicsTest {
         // Select settings
         // Verify default search engine (Google)
 
-
         homeScreen {
         }.openThreeDotMenu {
         }.openSettings {
+            // BASICS
+            verifyBasicsHeading()
+            verifySearchEngineButton()
+            verifySearchEngineSelected()
+            // drill down to submenu
+
+            verifyThemeButton()
+            verifyThemeSelected()
+            // drill down to submenu
+            verifyAccessibilityButton()
+            // drill down to submenu
+            verifySetAsDefaultBrowserButton()
+            // launch submenu
+
+            // PRIVACY
+            verifyPrivacyHeading()
+            verifyEnhancedTrackingProtectionButton()
+            verifyEnhancedTrackingProtectionValue()
+            // drill down to submenu
+            verifyAddPrivateBrowsingShortcutButton()
+            verifySitePermissionsButton()
+            // drill down on search
+            verifyDeleteBrowsingDataButton()
+            verifyDeleteBrowsingDataOnQuitButton()
+            verifyDataCollectionButton()
+            verifyPrivacyNoticeButton()
+            verifyLeakCanaryButton()
+
+            // DEV TOOLS
+            verifyDeveloperToolsHeading()
+            verifyRemoteDebug()
+
+            // ABOUT
+            verifyAboutHeading()
+            verifyHelp()
+            verifyRateOnGooglePlay()
+            verifyAboutFirefoxPreview()
         }
+
         // Select "Search engine" to change
         // Verify menu choices: Google, Amazon.com, Bing, DuckDuckGo, Twitter, Wikipedia
         // Verify label: "Show search suggestions"

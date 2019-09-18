@@ -20,7 +20,7 @@ import org.mozilla.fenix.helpers.HomeActivityTestRule
  *
  */
 
-class SettingsSyncTest {
+class SettingsDeveloperToolsTest {
     /* ktlint-disable no-blank-line-before-rbrace */ // This imposes unreadable grouping.
 
     private val mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
@@ -45,25 +45,55 @@ class SettingsSyncTest {
     @Ignore("This is a stub test, ignore for now")
     @Test
     // Walks through settings menu and sub-menus to ensure all items are present
-    fun settingsSyncItemsTest() {
-        // SYNC
-
-        // Open 3dot (main) menu
-        // Select settings
-        // Verify header: "Turn on Sync"
-        // Verify description: "Sync bookmarks, history, and more with your Firefox Account"
+    fun settingsDeveloperToolsItemsTest() {
+        // DEVELOPER TOOLS
+        // Verify header: "Developer Tools"
+        // Verify item: "Remote debugging via USB" and default toggle value: "Off"
     }
 
-    // SYNC
+    // DEVELOPER TOOLS
     @Ignore("This is a stub test, ignore for now")
     @Test
-    fun turnOnSync() {
-        // Note this requires a test Firefox Account and a desktop
+    fun turnOnRemoteDebuggingViaUsb() {
+        // Open terminal
+        // Verify USB debugging is off
         // Open 3dot (main) menu
         // Select settings
-        // Click on "Turn on Sync"
-        // Open Firefox on laptop and go to https://firefox.com/pair
-        // Pair with QR code and/or alternate method
-        // Verify pairing
+        // Toggle Remote debugging via USB to 'on'
+        // Open terminal
+        // Verify USB debugging is on
+    }
+
+    // ABOUT
+    @Ignore("This is a stub test, ignore for now")
+    @Test
+    fun verifyHelpRedirect() {
+        // Open 3dot (main) menu
+        // Select settings
+        // Click on "Help"
+        // Verify redirect to: https://support.mozilla.org/
+    }
+
+    @Ignore("This is a stub test, ignore for now")
+    @Test
+    fun verifyRateOnGooglePlayRedirect() {
+        // Open 3dot (main) menu
+        // Select settings
+        // Click on "Rate on Google Play"
+        // Verify Android "Open with Google Play Store" sub menu
+    }
+
+    @Ignore("This is a stub test, ignore for now")
+    @Test
+    fun verifyAboutFirefoxPreview() {
+        // Open 3dot (main) menu
+        // Select settings
+        // Click on "Verify About Firefox Preview"
+        // Verify about page contains....
+        // Build #
+        // Version #
+        // "Firefox Preview is produced by Mozilla"
+        // Day, Date, timestamp
+        // "Open source libraries we use"
     }
 }
